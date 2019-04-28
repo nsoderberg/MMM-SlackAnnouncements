@@ -41,6 +41,11 @@ Module.register("MMM-SlackAnnouncements", {
 
   processMessage: function(message) {
     this.message = message;
+    
+    if (this.message.toLowerCase() === 'none') {
+      this.message = '';
+    }
+    
     this.updateDom();
   },
 
