@@ -55,10 +55,7 @@ Module.register("MMM-SlackAnnouncements", {
     var wrapper = document.createElement("div");
     var displayText = this.message == undefined ? "Loading..." : this.message;
 
-    wrapper.innerHTML = `
-            <h1> ${this.config.title} </h1>
-            ${displayText}
-        `;
+    wrapper.innerHTML = `${displayText}`;
 
     return wrapper;
   }
